@@ -1,5 +1,6 @@
 # IP
 
+```powershell
 PS C:\Users\Josh> ipconfig
 
 Windows IP 配置
@@ -45,3 +46,5 @@ Windows IP 配置
 
    媒体状态  . . . . . . . . . . . . : 媒体已断开连接
    连接特定的 DNS 后缀 . . . . . . . :
+```
+
