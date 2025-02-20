@@ -1,0 +1,20 @@
+# 忽略所有 .log 文件
+#*.log
+
+# 忽略特定文件
+#config.yaml
+#secrets.env
+report.aux
+report.fdb_latexmk
+report.fls
+report.log
+report.pdf
+report.synctex.gz
+
+
+# 忽略某个目录及其所有内容
+#node_modules/
+#dist/
+
+# 忽略所有 .env 文件（环境变量）
+#.env
