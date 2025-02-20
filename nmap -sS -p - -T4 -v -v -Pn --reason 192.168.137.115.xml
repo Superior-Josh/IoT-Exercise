@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sS -p - -T4 -v -v -Pn --reason 192.168.137.115" profile_name="" scanner="nmap" start="1740067686" startstr="Thu Feb 20 16:08:06 2025" version="7.95" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"></scaninfo><verbose level="2"></verbose><debugging level="0"></debugging><output type="interactive">Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-02-20 16:08 GMT ��׼ʱ��
+Initiating ARP Ping Scan at 16:08
+Scanning 192.168.137.115 [1 port]
+Completed ARP Ping Scan at 16:08, 1.35s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:08
+Completed Parallel DNS resolution of 1 host. at 16:08, 0.09s elapsed
+Initiating SYN Stealth Scan at 16:08
+Scanning 192.168.137.115 [65535 ports]
+SYN Stealth Scan Timing: About 8.55% done; ETC: 16:14 (0:05:32 remaining)
+SYN Stealth Scan Timing: About 18.41% done; ETC: 16:13 (0:04:30 remaining)
+SYN Stealth Scan Timing: About 28.69% done; ETC: 16:13 (0:03:46 remaining)
+SYN Stealth Scan Timing: About 40.22% done; ETC: 16:13 (0:03:00 remaining)
+SYN Stealth Scan Timing: About 52.21% done; ETC: 16:12 (0:02:18 remaining)
+SYN Stealth Scan Timing: About 63.39% done; ETC: 16:12 (0:01:45 remaining)
+SYN Stealth Scan Timing: About 75.81% done; ETC: 16:12 (0:01:07 remaining)
+SYN Stealth Scan Timing: About 85.79% done; ETC: 16:12 (0:00:40 remaining)
+Completed SYN Stealth Scan at 16:12, 285.05s elapsed (65535 total ports)
+Nmap scan report for 192.168.137.115
+Host is up, received arp-response (0.016s latency).
+Scanned at 2025-02-20 16:08:07 GMT 标准时间 for 285s
+All 65535 scanned ports on 192.168.137.115 are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+MAC Address: FC:6B:F0:DF:F3:B3 (Topwell International Holdinds Limited)
+
+Read data files from: C:\Program Files (x86)\Nmap
+Nmap done: 1 IP address (1 host up) scanned in 286.81 seconds
+           Raw packets sent: 65550 (2.884MB) | Rcvd: 65579 (2.623MB)
+</output><host comment=""><status state="up"></status><address addr="192.168.137.115" vendor="" addrtype="ipv4"></address><address addr="FC:6B:F0:DF:F3:B3" vendor="Topwell International Holdinds Limited" addrtype="mac"></address><hostnames></hostnames><ports><extraports count="65535" state="closed"></extraports></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1740067972" timestr="Thu Feb 20 16:12:52 2025"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

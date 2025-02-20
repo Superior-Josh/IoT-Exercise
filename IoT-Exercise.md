@@ -1,50 +1,25 @@
-# IP
+# Wireshark 抓包分析
+热点 ip == 192.168.137.1
 
-```powershell
-PS C:\Users\Josh> ipconfig
+摄像机 ip == 192.168.137.4
 
-Windows IP 配置
+（另一局域网下）手机ip == 192.168.137.82
+
+<br>
+
+约每25s三台（US,SG,US）阿里云服务器同时向摄像机发送UDP报文，数据段相同：
+
+`f115000400190300`
+
+摄像机回应：
+
+`f1140068544e5058474144000000b8bf554858564a00000003d2020e0002c1617389a8c00000000000000000313734303036333638333639343a694a3134436443413861774f6e374e695a314343384542453242394632343430464539383746394233443131323846333845`
+
+打开app后，摄像机不停向甲骨文服务器发送UDP报文，是视频数据：
+
+`f1d00/404d1020008e790acccd48a0b2ac438ae640d742d5df683af998bb312ef1c9605ff518c0e1d6b2f3a70d5c5f2894e0fad21308339a88ce3f23258672cf057d9b26968edb4e4df68a9d93733af32653ba8dfa9e05bbad9a66d89833d5e161343b7e2d0c3511246654dab210436af3e7cc12021778c669bd6efb0eb46df31d4dfc8a8eed270e5c1bd538fab6be8eb68482adea2566fb6ad6b2b2501d5c2ca88c519fd4925ad3ec1ff2eb39926dbf3e08c30bb27ac0e1cf39b734a0107fea9682df67a718a4c527f95de12f527b92ed4024c16f22ca4ec445173916442b31cb882307d11d23319367b2431cc01be4946c4d139e17e7606d0b42262a8514861849de27fa6bd5fae2f776ea9b10807527be470f2a4d2536b2ae4c73f2306618542380628acdcfc5d2ea8a9af52935a1588f58e0a5af9ba372ebfcc3d6230a1e161e4322d9e7d7eecea5d9fe9dbd315638d03ff7e4f03fad86d6cbb883b7825a9308fbca0bcebef4b3c842fed42ff2e14aa04c82d7052c229bc6a9a625c985600be23e8d0103a780c430e70d3a9e1ad10b56a868f51289a74ccb0f6d0b1328d496297ec3ed940bdc3a63c3e9d7d899b37dcb3867d20290a29ad9231a0bd54c0732048bfb7ecec101910a57137bcf9517c308ce76c2b15ef402f34d023e63aa5f57bb3a6feea2b93da8a9d8f7e2efa094c93e10021238e8f1af7864df119b83a1e87f3e5d7f9497c16fc23cc3b3a51c8ac0f6c1dae37d507b40cc3a3714758a38542e4eb894f727a50a435b31321dd0b3b2bf8c9e42329131da4c1342686afe49a89685354e2454e24ee95fc83dc2cee38fff25925154ebaaa2114ecff93bc5d4066d400088c6b3fc4a4f2664344e4d6fb84d37968700403c7cff41f39d255d6b31f6eddc76a11aaf3d5990b9857e04a8a2917f2e44b6e4c6dcdd0002d80d3cbe7c32fa8c39ed7bec4f82fb6536ac1fa5becd6176d6b7ed1f67a2caf5b93b846719ae7a8d48f99ffc661fc6ea20390e4553cdbf4bad06e39f2d9ee017cd83aa74d282fc58e1f8c41b83612676faf69a3f7803c6203ea07e39d02c42687c1fe22a0e3d027db02a9e0c0caaddd4dea4820a1a4e0ffa8e48196f8c07098e0dcb51667e175e6002bfba0157856eead63835c6328ffa158586eeab110fda8a8bd9870bfddcd057b5701789878632cc258d39b8bf9f7c93c4a4812717c9d599dd9efe961c19a3b9e2679077d73278256cba70167807e8014639e2f75bdc8caaab72b0e0fa0cd6de3d67539fa3766d139a89bc617e7fd7a315f9f54c3d3fa0aba5f634cd53730658d119aaefc8b675e55dce4e0a5b141443150e49d72319908fa26e098e1772c5f3f1e2aee9254443ee0f1885fae89c8a1f107fe113b436e633afc77b4c89b4f14e79d6f2643068cb0deef839c47a8da80f92639fe53ea1e379e340432c692d6ba466ee7e209`
+
+# Nmap 扫描分析
 
 
-未知适配器 本地连接:
-
-   媒体状态  . . . . . . . . . . . . : 媒体已断开连接
-   连接特定的 DNS 后缀 . . . . . . . :
-
-以太网适配器 vEthernet (WSL (Hyper-V firewall)):
-
-   连接特定的 DNS 后缀 . . . . . . . :
-   本地链接 IPv6 地址. . . . . . . . : fe80::304a:7e83:8133:7395%64
-   IPv4 地址 . . . . . . . . . . . . : 172.18.192.1
-   子网掩码  . . . . . . . . . . . . : 255.255.240.0
-   默认网关. . . . . . . . . . . . . :
-
-无线局域网适配器 WLAN:
-
-   连接特定的 DNS 后缀 . . . . . . . :
-   IPv6 地址 . . . . . . . . . . . . : fd0c:6986:c48f:fb40:6cdd:a8ae:dcac:eba9
-   临时 IPv6 地址. . . . . . . . . . : fd0c:6986:c48f:fb40:244b:284c:66a9:4bde
-   本地链接 IPv6 地址. . . . . . . . : fe80::ce57:fdfb:da7c:8779%15
-   IPv4 地址 . . . . . . . . . . . . : 192.168.156.195
-   子网掩码  . . . . . . . . . . . . : 255.255.240.0
-   默认网关. . . . . . . . . . . . . : 192.168.144.1
-
-无线局域网适配器 本地连接* 1:
-
-   媒体状态  . . . . . . . . . . . . : 媒体已断开连接
-   连接特定的 DNS 后缀 . . . . . . . :
-
-无线局域网适配器 本地连接* 2:
-
-   连接特定的 DNS 后缀 . . . . . . . :
-   本地链接 IPv6 地址. . . . . . . . : fe80::b9f8:630d:acc:daa5%6
-   IPv4 地址 . . . . . . . . . . . . : 192.168.137.1
-   子网掩码  . . . . . . . . . . . . : 255.255.255.0
-   默认网关. . . . . . . . . . . . . :
-
-以太网适配器 以太网:
-
-   媒体状态  . . . . . . . . . . . . : 媒体已断开连接
-   连接特定的 DNS 后缀 . . . . . . . :
-```
-
+# apk 反编译分析
