@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sS -p - -T4 -v -v -Pn --reason 192.168.137.115" profile_name="" scanner="nmap" start="1740067686" startstr="Thu Feb 20 16:08:06 2025" version="7.95" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"></scaninfo><verbose level="2"></verbose><debugging level="0"></debugging><output type="interactive">Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
-Starting Nmap 7.95 ( https://nmap.org ) at 2025-02-20 16:08 GMT ��׼ʱ��
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-02-20 16:08 GMT 标准时间
 Initiating ARP Ping Scan at 16:08
 Scanning 192.168.137.115 [1 port]
 Completed ARP Ping Scan at 16:08, 1.35s elapsed (1 total hosts)
